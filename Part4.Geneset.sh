@@ -1,3 +1,16 @@
+#!/usr/bin/bash
+
+## this pipeline is used to construct geneset and conduct the KEGG functional annotation and PETase identification.
+
+####################### Parameters ########################
+#$1 
+#Sample assemble list for MetaGeneMark 
+#$2
+#A fasta file with reference sequences
+#$3
+#Output directory, this is now set to the same for all steps. In the settings below, you can set them differently for each individual steps.
+###########################################################
+
 output_dir=$3
 #################### Settings for metaGeneMark
 meta_genemark_list=$1
