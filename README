@@ -4,4 +4,4 @@ Code for the manuscript "Global marine microbial diversity and its potential in 
 
 For each file, there is a DESCRIPTION inside for detailed usage guidance.
 
-Because of file size limitation, we uploaded the AMP models to figshare: https://figshare.com/articles/dataset/3_models_for_AMP_prediction/26028931. Please download the folder to the project directory before running the codes.
+Because of file size limitation, we uploaded the other 3 AMP models to figshare: https://figshare.com/articles/dataset/3_models_for_AMP_prediction/26028931. Please download them to the AMP model directory (c_AMP_Models) before running the codes.
