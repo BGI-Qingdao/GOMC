@@ -6,7 +6,7 @@
 #$1 
 #Sample assemble list for MetaGeneMark 
 #$2
-#A fasta file with reference sequences
+#A fasta file with IsPETase reference sequences
 #$3
 #Output directory, this is now set to the same for all steps. In the settings below, you can set them differently for each individual steps.
 ###########################################################
