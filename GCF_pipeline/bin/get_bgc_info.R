@@ -1,0 +1,5 @@
+library(DBI)
+args<-commandArgs(T)
+mydb <- dbConnect(RSQLite::SQLite(),args[1])
+BGC_INFO<-data.frame(dbGetQuery(mydb, 'SELECT id,orig_folder,orig_filename FROM bgc'))
+write.table(BGC_INFO, args[2], quote=F, sep="\t",row.names=F)

@@ -1,0 +1,8 @@
+library(DBI)
+args<-commandArgs(T)
+mydb <- dbConnect(RSQLite::SQLite(),args[1])
+#TYPE_INFO<-data.frame(dbGetQuery(mydb, 'SELECT chem_subclass.id,chem_class.name FROM chem_subclass,chem_class WHERE chem_subclass.class_id=chem_class.id'))
+#BGC_INFO<-data.frame(dbGetQuery(mydb, 'SELECT * FROM bgc_class'))
+BGC_INFO<-data.frame(dbGetQuery(mydb, 'SELECT bgc_class.bgc_id, chem_class.name FROM bgc_class, chem_subclass, chem_class WHERE bgc_class.chem_subclass_id = chem_subclass.id AND chem_subclass.class_id = chem_class.id'))
+#write.table(TYPE_INFO, args[2], quote=F, sep="\t",row.names=F)
+write.table(BGC_INFO, args[2], quote=F, sep="\t",row.names=F)

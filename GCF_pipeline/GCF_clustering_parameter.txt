@@ -1,0 +1,35 @@
+# step run
+RUN_PREPARE=y
+RUN_BIGSLICE=y
+RUN_ED_CLUSTERING=y
+RUN_CIRCLIZE=y
+RUN_RAREFACTION=y
+RUN_NOVELTY=y
+
+# post jobs
+##normal: P18Z19700N0076,st.q
+##super: st_supermem,st_supermem.q
+PROJECT=P18Z19700N0076
+QUEUE=st.q
+SUPER_PROJECT=st_supermem
+SUPER_QUEUE=st_supermem.q
+
+# Input File
+MAGs=
+Antismash=
+Phylums=ALL
+#Phylums=/dellfsqd2/ST_OCEAN/USER/zhouchanghao/script/GCF_pipline/example/phylum.list
+
+# Output Folder
+Output=Output
+
+# Big-Slice parameter
+L2norm_threshold=0.4
+
+# iNEXT parameter
+Endpoint=250000
+Nboot=50
+SE=F
+
+# Novetly parameter
+Novetly_threshold=0.2
