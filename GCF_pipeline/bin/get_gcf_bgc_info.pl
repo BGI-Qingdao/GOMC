@@ -58,11 +58,12 @@ close BGC_INFO;
 
 my %final_info;
 open MEMBERSHIP, $bgc_member or die $!;
+<MEMBERSHIP>;
 while(<MEMBERSHIP>){
 	chomp;
 	next if $.==1;
 	my @tmp = split("\t");
-	next if $tmp[1]==0;
+#	next if $tmp[1]==0;
 	$final_info{$tmp[1]}{$tmp[0]} = $bgc_info{$tmp[0]};
 }
 close MEMBERSHIP;
